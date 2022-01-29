@@ -82,19 +82,19 @@
 + response: 
 ```json
 {
-"start_qa_salary": "salary",
-"qa_salary_after_6_months": "salary * 2",
-"qa_salary_after_12_months": "salary * 2.7",
-"qa_salary_after_1.5_year": "salary * 3.3",
-"qa_salary_after_3.5_years": "salary * 3.8",
-"person": {
-	"u_name": [
-		"user_name", 
-		"salary", 
-		"age"
-		],
-	"u_age": "age",
-	"u_salary_5_years": "salary * 4.2"
+	"start_qa_salary": "salary",
+	"qa_salary_after_6_months": "salary * 2",
+	"qa_salary_after_12_months": "salary * 2.7",
+	"qa_salary_after_1.5_year": "salary * 3.3",
+	"qa_salary_after_3.5_years": "salary * 3.8",
+	"person": {
+		"u_name": [
+			"user_name", 
+			"salary", 
+			"age"
+			],
+		"u_age": "age",
+		"u_salary_5_years": "salary * 4.2"
 	}
 }
 ```
@@ -111,16 +111,28 @@
 
 + response: json
 ```json
-{'name': name,
-          'age': age,
-          'salary': salary,
-          'family': {'children': [['Alex', 24], ['Kate', 12]],
-                     'pets': {'cat':{'name':'Sunny',
-                                     'age': 3},
-                              'dog':{'name':'Luky',
-                                     'age': 4}},
-                     'u_salary_1_5_year': salary * 4}
-          }
+{
+	"name": "name",
+	"age": "age",
+	"salary": "salary",
+	"family": {
+		"children": [
+			["Alex", 24], 
+			["Kate", 12]
+			],
+		"pets": {
+			"cat":{
+				"name":"Sunny",
+				"age": 3
+				},
+			"dog":{
+				"name":"Luky",
+				"age": 4
+				}
+			},
+		"u_salary_1_5_year": "salary * 4"
+	}
+}
 ```
 
 6. /object_info_4
