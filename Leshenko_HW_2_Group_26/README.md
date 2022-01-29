@@ -3,14 +3,14 @@
 `http://162.55.220.72:5005/first`
 1. Отправить запрос.
 2. Статус код 200
-```json
+```js
 pm.test("Статус код 200", function () {
     pm.response.to.have.status(200);
 });
 ```
 
 3. Проверить, что в body приходит правильный string.
-```json
+```js
 pm.test("В ответ получаем верную строку", function () {
     pm.expect(pm.response.text()).to.include("This is the first responce from server!");
 });
