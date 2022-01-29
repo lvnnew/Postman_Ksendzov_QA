@@ -191,97 +191,112 @@ pm.test("Статус код 200", function () {
 
 3. Спарсить response body в json.
 ```js
-
+let jsonData = pm.response.json();
 ```
 
 5. Спарсить request.
 ```js
-
+let reqData = pm.request.url.query.toObject();
+// создадим переменную salaryInt и присвоим ей преобразованное в int значение reqData.salary 
+let salaryInt = +(reqData.salary)
 ```
 
 7. Проверить, что name в ответе равно name s request (name забрать из request.)
 ```js
-
+pm.test("Response name = Request name", function () {
+    pm.expect(jsonData.name).to.eql(reqData.name);
+});
 ```
 
 9. Проверить, что age в ответе равно age из request (age забрать из request.)
 ```js
-
+ageInt = Number(jsonData.age);
+pm.test("Response age = Request age", function () {
+    pm.expect(jsonData.age).to.eql(ageInt);
+});
 ```
 
 11. Вывести в консоль параметр salary из request.
 ```js
-
+console.log("Request salary ===> ", reqData.salary);
 ```
 
 13. Вывести в консоль параметр salary из response.
 ```js
-
+console.log("Rsponse salary ===> ", jsonData.salary);
 ```
 
 15. Вывести в консоль 0-й элемент параметра salary из response.
 ```js
-
+console.log("Вывод из списка salary, элемента 0 ===> ", jsonData.salary[0]);
 ```
 
 17. Вывести в консоль 1-й элемент параметра salary параметр salary из response.
 ```js
-
+console.log("Вывод из списка salary, элемента 1 ===> ", jsonData.salary[1]);
 ```
 
 19. Вывести в консоль 2-й элемент параметра salary параметр salary из response.
 ```js
-
+console.log("Вывод из списка salary, элемента 2 ===> ", jsonData.salary[2]);
 ```
 
 21. Проверить, что 0-й элемент параметра salary равен salary из request (salary забрать из request.)
 ```js
-
+salaryInt = Number(reqData.salary);
+pm.test("Response salary [0] = Request salary", function () {
+    pm.expect(jsonData.salary[0]).to.eql(salaryInt);
+});
 ```
 
 23. Проверить, что 1-й элемент параметра salary равен salary*2 из request (salary забрать из request.)
 ```js
-
+pm.test("Response salary [1] = Request salary", function () {
+    pm.expect(jsonData.salary[1]).to.eql+(salaryInt*2);
+});
 ```
 
 25. Проверить, что 2-й элемент параметра salary равен salary*3 из request (salary забрать из request.)
 ```js
-
+pm.test("Response salary [1] = Request salary", function () {
+    pm.expect(jsonData.salary[2]).to.eql+(salaryInt*3);
+});
 ```
 
 27. Создать в окружении переменную name
-```js
-
-```
+    +
 
 29. Создать в окружении переменную age
-```js
-
-```
+    +
 
 31. Создать в окружении переменную salary
-```js
-
-```
+    +
 
 33. Передать в окружение переменную name
 ```js
-
+pm.environment.set("name", jsonData.name);
 ```
 
 35. Передать в окружение переменную age
 ```js
-
+pm.environment.set("age", jsonData.age);
 ```
 
 37. Передать в окружение переменную salary
 ```js
-
+pm.environment.set("salary", jsonData.salary[0]);
 ```
 
 39. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
 ```js
-
+for (let i = 0; i < jsonData.salary.length; i++) {
+  // Этот код выполняется для каждого элемента
+  console.log("Вывод из списка, элемента с индексом " + i + ": " +jsonData.salary[i]);
+}
+// или
+// for (let i of jsonData.salary){
+//     console.log(i)
+// }
 ```
 
 <hr>
