@@ -49,34 +49,36 @@
 }
 ```
 
-+ /object_info_1
-```
-EP_3
-Method: GET
-EndPoint: /object_info_1
-request url params: 
- name: str
- age: int
- weight: int
+3. /object_info_1
 
-response: 
++ EP_3
+`Method: GET`
+`EndPoint: /object_info_1`
++ request url params: 
+`name: str`
+`age: int`
+`weight: int`
+
++ response: 
+```json
 {'name': name,
           'age': age,
           'daily_food': weight * 0.012,
           'daily_sleep': weight * 2.5}
 ```
 
-+ /object_info_2
-```
-EP_4
-Method: GET
-EndPoint: /object_info_2
-request url params: 
- name: str
- age: int
- salary: int
+4. /object_info_2
 
-response: 
++ EP_4
+`Method: GET`
+`EndPoint: /object_info_2`
++ request url params: 
+`name: str`
+`age: int`
+`salary: int`
+
++ response: 
+```json
 {'start_qa_salary': salary,
           'qa_salary_after_6_months': salary * 2,
           'qa_salary_after_12_months': salary * 2.7,
@@ -88,17 +90,18 @@ response:
           }
 ```
 
-+ /object_info_3
-```
-EP_5
-Method: GET
-EndPoint: /object_info_3
-request url params: 
- name: str
- age: int
- salary: int
+5. /object_info_3
 
-response: 
++ EP_5
+`Method: GET`
+`EndPoint: /object_info_3`
++ request url params: 
+`name: str`
+`age: int`
+`salary: int`
+
++ response: json
+```
 {'name': name,
           'age': age,
           'salary': salary,
@@ -111,33 +114,35 @@ response:
           }
 ```
 
-+ /object_info_4
-```
-EP_6
-Method: GET
-EndPoint: /object_info_4
-request url params: 
- name: str
- age: int
- salary: int
+6. /object_info_4
 
-response: 
++ EP_6
+`Method: GET`
+`EndPoint: /object_info_4`
++ request url params: 
+`name: str`
+`age: int`
+`salary: int`
+
++ response: 
+```json
 {'name': name,
           'age': int(age),
           'salary': [salary, str(salary * 2), str(salary * 3)]}
 ```
 
-+ /user_info_2
-```
-EP_7
-Method: POST
-EndPoint: /user_info_2
-request form data: 
- name: str
- age: int
- salary: int
+7. /user_info_2
 
-response: 
++ EP_7
+`Method: POST`
+`EndPoint: /user_info_2`
++ request form data: 
+`name: str`
+`age: int`
+`salary: int`
+
++ response:
+```json
 {'start_qa_salary': salary,
           'qa_salary_after_6_months': salary * 2,
           'qa_salary_after_12_months': salary * 2.7,
