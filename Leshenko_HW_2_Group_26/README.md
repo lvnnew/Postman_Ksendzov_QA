@@ -437,14 +437,14 @@ for (let i of jsonData.person.u_name){
 */
 // или 
 /*
-for(let KEY in resp.person) {
-   if(typeof(resp.person[KEY]) == "object"){
-       for(let i = 0; i < Object.keys(resp.person[KEY]).length; i++){
-           console.log(resp.person[KEY][i]);
+for(let KEY in jsonData.person) {
+   if(typeof(jsonData.person[KEY]) == "object"){
+       for(let i = 0; i < Object.keys(jsonData.person[KEY]).length; i++){
+           console.log(jsonData.person[KEY][i]);
        }
    }
-   else if(typeof(resp.person[KEY]) != "object") {
-        console.log(resp.person[KEY]);
+   else if(typeof(jsonData.person[KEY]) != "object") {
+        console.log(jsonData.person[KEY]);
    }
 }
 */
