@@ -4,14 +4,14 @@
 
 1. Отправить запрос.
 
-3. Статус код 200
+2. Статус код 200
 ```js
 pm.test("Статус код 200", function () {
     pm.response.to.have.status(200);
 });
 ```
 
-    3. Проверить, что в body приходит правильный string.
+3. Проверить, что в body приходит правильный string.
 ```js
 pm.test("В ответ получаем верную строку", function () {
     pm.expect(pm.response.text()).to.include("This is the first responce from server!");
