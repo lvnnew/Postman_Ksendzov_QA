@@ -8,12 +8,12 @@
 
 + /get_method
 
- + EP_1
- + Method: GET
- + EndPoint: /get_method
- + request url params: 
- + name: str
- + age: int
++ EP_1
+`Method: GET`
+`EndPoint: /get_method`
++ request url params:
+`name: str`
+`age: int`
 
 + response:
 ```js
