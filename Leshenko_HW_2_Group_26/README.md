@@ -1,6 +1,7 @@
 ## HW_2 Postman
 
 `http://162.55.220.72:5005/first`
+
 1. Отправить запрос.
 
 3. Статус код 200
@@ -16,9 +17,11 @@ pm.test("В ответ получаем верную строку", function () 
     pm.expect(pm.response.text()).to.include("This is the first responce from server!");
 });
 ```
+
 <hr>
 
 `http://162.55.220.72:5005/user_info_3`
+
 1. Отправить запрос.
 
 3. Статус код 200
@@ -95,7 +98,9 @@ pm.test("Response u_salary_1_5_year = salary*4", function () {
 ```
 
 <hr>
+
 `http://162.55.220.72:5005/object_info_3`
+
 1. Отправить запрос.
 
 3. Статус код 200
@@ -172,9 +177,12 @@ pm.test("Dog age = 4", function () {
 ```
 
 <hr>
+
 `http://162.55.220.72:5005/object_info_4`
+
 1. Отправить запрос.
-2. Статус код 200
+
+3. Статус код 200
 ```js
 pm.test("Статус код 200", function () {
     pm.response.to.have.status(200);
@@ -277,12 +285,18 @@ pm.test("Статус код 200", function () {
 ```
 
 <hr>
+
 `http://162.55.220.72:5005/user_info_2`
+
 1. Вставить параметр salary из окружения в request
-2. Вставить параметр age из окружения в age
-3. Вставить параметр name из окружения в name
-4. Отправить запрос.
-5. Статус код 200
+
+3. Вставить параметр age из окружения в age
+
+5. Вставить параметр name из окружения в name
+
+7. Отправить запрос.
+
+9. Статус код 200
 ```js
 pm.test("Статус код 200", function () {
     pm.response.to.have.status(200);
