@@ -2,20 +2,21 @@
 
 #### Создать запросы в Postman.
 
++ Protocol: http
++ IP: 162.55.220.72
++ Port: 5005
+
 + /get_method
-```
-Protocol: http
-IP: 162.55.220.72
-Port: 5005
 
-EP_1
-Method: GET
-EndPoint: /get_method
-request url params: 
- name: str
- age: int
+ + EP_1
+ + Method: GET
+ + EndPoint: /get_method
+ + request url params: 
+ + name: str
+ + age: int
 
-response: 
++ response:
+```js
 [
     “Str”,
     “Str”
