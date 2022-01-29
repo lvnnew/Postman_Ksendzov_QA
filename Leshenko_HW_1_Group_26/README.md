@@ -16,7 +16,7 @@
 `age: int`
 
 + response:
-```json
+```
 [
     “Str”,
     “Str”
