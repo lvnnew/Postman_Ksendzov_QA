@@ -23,6 +23,7 @@ response:
 
 ==================
 
+```
 EP_2
 Method: POST
 EndPoint: /user_info_3
@@ -38,9 +39,11 @@ response:
           'family': {'children': [['Alex', 24], ['Kate', 12]],
                      'u_salary_1_5_year': salary * 4}}
 
+```
 
 ==================
 
+```
 EP_3
 Method: GET
 EndPoint: /object_info_1
@@ -54,10 +57,11 @@ response:
           'age': age,
           'daily_food': weight * 0.012,
           'daily_sleep': weight * 2.5}
-
+```
 
 ==================
 
+```
 EP_4
 Method: GET
 EndPoint: /object_info_2
@@ -76,10 +80,11 @@ response:
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
           }
-
+```
 
 ==================
 
+```
 EP_5
 Method: GET
 EndPoint: /object_info_3
@@ -99,10 +104,11 @@ response:
                                      'age': 4}},
                      'u_salary_1_5_year': salary * 4}
           }
-
+```
 
 ==================
 
+```
 EP_6
 Method: GET
 EndPoint: /object_info_4
@@ -115,10 +121,11 @@ response:
 {'name': name,
           'age': int(age),
           'salary': [salary, str(salary * 2), str(salary * 3)]}
-
+```
 
 ==================
 
+```
 EP_7
 Method: POST
 EndPoint: /user_info_2
@@ -137,3 +144,4 @@ response:
                      'u_age': age,
                      'u_salary_5_years': salary * 4.2}
           }
+```
