@@ -147,9 +147,15 @@
 
 + response: 
 ```json
-{'name': name,
-          'age': int(age),
-          'salary': [salary, str(salary * 2), str(salary * 3)]}
+{
+	"name": "name",
+	"age": "int(age)",
+	"salary": [
+		"salary", 
+		"str(salary * 2)", 
+		"str(salary * 3)"
+	]
+}
 ```
 
 7. /user_info_2
@@ -164,13 +170,20 @@
 
 + response:
 ```json
-{'start_qa_salary': salary,
-          'qa_salary_after_6_months': salary * 2,
-          'qa_salary_after_12_months': salary * 2.7,
-          'qa_salary_after_1.5_year': salary * 3.3,
-          'qa_salary_after_3.5_years': salary * 3.8,
-          'person': {'u_name': [user_name, salary, age],
-                     'u_age': age,
-                     'u_salary_5_years': salary * 4.2}
-          }
+{
+	"start_qa_salary": "salary",
+	"qa_salary_after_6_months": "salary * 2",
+	"qa_salary_after_12_months": "salary * 2.7",
+	"qa_salary_after_1.5_year": "salary * 3.3",
+	"qa_salary_after_3.5_years": "salary * 3.8",
+	"person": {
+		"u_name": [
+			"user_name", 
+			"salary", 
+			"age"
+			],
+	"u_age": "age",
+	"u_salary_5_years": "salary * 4.2"
+	}
+}
 ```
