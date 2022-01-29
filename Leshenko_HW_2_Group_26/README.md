@@ -107,52 +107,68 @@ pm.test("Статус код 200", function () {
 
 3. Спарсить response body в json.
 ```js
-
+let jsonData = pm.response.json();
 ```
 
 5. Спарсить request.
 ```js
-
+let reqData = pm.request.url.query.toObject();
+// создадим переменную salaryInt и присвоим ей преобразованное в int значение reqData.salary 
+let salaryInt = +(reqData.salary)
 ```
 
 7. Проверить, что name в ответе равно name s request (name забрать из request.)
 ```js
-
+pm.test("Response name = Request name", function () {
+    pm.expect(jsonData.name).to.eql(reqData.name);
+});
 ```
 
 9. Проверить, что age в ответе равно age s request (age забрать из request.)
 ```js
-
+pm.test("Response age = Request age", function () {
+    pm.expect(jsonData.age).to.eql(reqData.age);
+});
 ```
 
 11. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
 ```js
-
+pm.test("Response salary = Request salary", function () {
+    pm.expect(jsonData.salary).to.eql(salaryInt);
+});
 ```
 
 13. Вывести в консоль параметр family из response.
 ```js
-
+console.log(jsonData.family);
 ```
 
 15. Проверить, что у параметра dog есть параметры name.
 ```js
-
+pm.test("Dog has a name", function () {
+    pm.expect(jsonData.family.pets.dog).to.have.property("name");
+});
 ```
 
 17. Проверить, что у параметра dog есть параметры age.
 ```js
-
+pm.test("Dog has a age", function () {
+    pm.expect(jsonData.family.pets.dog).to.have.property("age");
+});
 ```
 
 19. Проверить, что параметр name имеет значение Luky.
 ```js
-
+pm.test("Dog name = Luky", function () {
+    pm.expect(jsonData.family.pets.dog.name).to.eql("Luky");
+});
 ```
 
 21. Проверить, что параметр age имеет значение 4.
 ```js
-
+pm.test("Dog age = 4", function () {
+    pm.expect(jsonData.family.pets.dog.age).to.eql(4);
+});
 ```
 
 <hr>
