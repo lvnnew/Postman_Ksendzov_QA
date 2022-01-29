@@ -6,7 +6,7 @@
 + IP: 162.55.220.72
 + Port: 5005
 
-+ /get_method
+1. /get_method
 
 + EP_1
 `Method: GET`
