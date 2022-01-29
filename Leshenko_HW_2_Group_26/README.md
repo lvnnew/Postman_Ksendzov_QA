@@ -15,7 +15,7 @@ pm.test("В ответ получаем верную строку", function () 
     pm.expect(pm.response.text()).to.include("This is the first responce from server!");
 });
 ```
-
+        
 `http://162.55.220.72:5005/user_info_3`
 1. Отправить запрос.
 2. Статус код 200
