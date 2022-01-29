@@ -16,24 +16,25 @@
 `age: int`
 
 + response:
-```js
+```json
 [
     “Str”,
     “Str”
 ]
 ```
 
-+ /user_info_3
-```
-EP_2
-Method: POST
-EndPoint: /user_info_3
-request form data: 
- name: str
- age: int
- salary: int
+2. /user_info_3
 
-response: 
++ EP_2
+`Method: POST`
+`EndPoint: /user_info_3`
++ request form data: 
+`name: str`
+`age: int`
+`salary: int`
+
++ response:
+```json
 {'name': name,
           'age': age,
           'salary': salary,
