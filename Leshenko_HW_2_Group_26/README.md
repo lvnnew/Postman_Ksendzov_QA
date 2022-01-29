@@ -19,20 +19,88 @@ pm.test("В ответ получаем верную строку", function () 
 `http://162.55.220.72:5005/user_info_3`
 1. Отправить запрос.
 2. Статус код 200
-3. Спарсить response body в json.
-4. Проверить, что name в ответе равно name s request (name вбить руками.)
-5. Проверить, что age в ответе равно age s request (age вбить руками.)
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-7. Спарсить request.
-8. Проверить, что name в ответе равно name s request (name забрать из request.)
-9. Проверить, что age в ответе равно age s request (age забрать из request.)
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-11. Вывести в консоль параметр family из response.
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+```js
+pm.test("Статус код 200", function () {
+    pm.response.to.have.status(200);
+});
+```
 
+4. Спарсить response body в json.
+```js
+let jsonData = pm.response.json();
+```
+
+5. Проверить, что name в ответе равно name s request (name вбить руками.)
+```js
+pm.test("name = Vladimir", function () {
+    pm.expect(jsonData.name).to.eql("Vladimir");
+});
+```
+7. Проверить, что age в ответе равно age s request (age вбить руками.)
+```js
+pm.test("age = 30", function () {
+    pm.expect(jsonData.age).to.eql("30");
+});
+```
+
+9. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+```js
+pm.test("salary = 1000", function () {
+    pm.expect(jsonData.salary).to.eql(1000);
+});
+```
+
+11. Спарсить request.
+```js
+let reqData = request.data;
+// создадим переменную salaryInt и присвоим ей преобразованное в int значение reqData.salary 
+let salaryInt = +(reqData.salary);
+```
+
+13. Проверить, что name в ответе равно name s request (name забрать из request.)
+```js
+pm.test("Response name = Request name", function () {
+    pm.expect(jsonData.name).to.eql(reqData.name);
+});
+```
+
+15. Проверить, что age в ответе равно age s request (age забрать из request.)
+```js
+pm.test("Response age = Request age", function () {
+    pm.expect(jsonData.age).to.eql(reqData.age);
+});
+```
+
+17. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+```js
+pm.test("Response salary = Request salary", function () {
+    pm.expect(jsonData.salary).to.eql(salaryInt);
+});
+```
+
+19. Вывести в консоль параметр family из response.
+```js
+console.log(jsonData.family);
+```
+
+21. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+```js
+salaryInt = salaryInt*4;
+pm.test("Response u_salary_1_5_year = salary*4", function () {
+    pm.expect(jsonData.family.u_salary_1_5_year).to.eql(salaryInt);
+});
+```
+
+<hr>
 `http://162.55.220.72:5005/object_info_3`
 1. Отправить запрос.
 2. Статус код 200
+```js
+pm.test("Статус код 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+
 3. Спарсить response body в json.
 4. Спарсить request.
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
@@ -43,10 +111,16 @@ pm.test("В ответ получаем верную строку", function () 
 10. Проверить, что у параметра dog есть параметры age.
 11. Проверить, что параметр name имеет значение Luky.
 12. Проверить, что параметр age имеет значение 4.
-
+<hr>
 `http://162.55.220.72:5005/object_info_4`
 1. Отправить запрос.
 2. Статус код 200
+```js
+pm.test("Статус код 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+
 3. Спарсить response body в json.
 4. Спарсить request.
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
@@ -66,13 +140,19 @@ pm.test("В ответ получаем верную строку", function () 
 19. Передать в окружение переменную age
 20. Передать в окружение переменную salary
 21. Написать цикл который выведет в консоль по порядку элементы списка из параметра salary.
-
+<hr>
 `http://162.55.220.72:5005/user_info_2`
 1. Вставить параметр salary из окружения в request
 2. Вставить параметр age из окружения в age
 3. Вставить параметр name из окружения в name
 4. Отправить запрос.
 5. Статус код 200
+```js
+pm.test("Статус код 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+
 6. Спарсить response body в json.
 7. Спарсить request.
 8. Проверить, что json response имеет параметр start_qa_salary
