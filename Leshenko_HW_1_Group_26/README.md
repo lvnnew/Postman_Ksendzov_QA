@@ -2,6 +2,7 @@
 
 #### Создать запросы в Postman.
 
++ /get_method
 ```
 Protocol: http
 IP: 162.55.220.72
@@ -21,8 +22,7 @@ response:
 ]
 ```
 
-==================
-
++ /user_info_3
 ```
 EP_2
 Method: POST
@@ -41,8 +41,7 @@ response:
 
 ```
 
-==================
-
++ /object_info_1
 ```
 EP_3
 Method: GET
@@ -59,8 +58,7 @@ response:
           'daily_sleep': weight * 2.5}
 ```
 
-==================
-
++ /object_info_2
 ```
 EP_4
 Method: GET
@@ -82,8 +80,7 @@ response:
           }
 ```
 
-==================
-
++ /object_info_3
 ```
 EP_5
 Method: GET
@@ -106,8 +103,7 @@ response:
           }
 ```
 
-==================
-
++ /object_info_4
 ```
 EP_6
 Method: GET
@@ -123,8 +119,7 @@ response:
           'salary': [salary, str(salary * 2), str(salary * 3)]}
 ```
 
-==================
-
++ /user_info_2
 ```
 EP_7
 Method: POST
