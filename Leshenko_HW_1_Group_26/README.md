@@ -39,8 +39,8 @@
           'age': age,
           'salary': salary,
           'family': {'children': [['Alex', 24], ['Kate', 12]],
-                     'u_salary_1_5_year': salary * 4}}
-
+                     'u_salary_1_5_year': salary * 4
+}};
 ```
 
 + /object_info_1
