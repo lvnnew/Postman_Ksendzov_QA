@@ -1,6 +1,6 @@
 ## HW_3 Postman
 
-## 1. Необходимо залогиниться `http://162.55.220.72:5005/login`
+### 1. Необходимо залогиниться `http://162.55.220.72:5005/login`
 ```
 POST
 login : str
@@ -17,7 +17,7 @@ pm.environment.set("token", jsonData.token);
 
 <hr>
 
-## 2. `http://162.55.220.72:5005/user_info`
+### 2. `http://162.55.220.72:5005/user_info`
 ```
 POST
 age: int
@@ -40,8 +40,8 @@ auth_token
 ```json
 {
     "start_qa_salary":"salary",
-    "qa_salary_after_6_months": "salary" * 2,
-    "qa_salary_after_12_months": "salary" * 2.9,
+    "qa_salary_after_6_months": "salary * 2",
+    "qa_salary_after_12_months": "salary * 2.9",
     "person": {
                 "u_name":[
                             "user_name", 
@@ -49,7 +49,7 @@ auth_token
                             "age"
                         ],
                 "u_age":"age",
-                "u_salary_1.5_year": "salary" * 4
+                "u_salary_1.5_year": "salary * 4"
     }
 }
 ```
@@ -172,7 +172,7 @@ pm.environment.set("salary", jsonData.person.u_salary_1_5_year);
 
 <hr>
 
-## 3. `http://162.55.220.72:5005/new_data`
+### 3. `http://162.55.220.72:5005/new_data`
 + Request
 ```
 POST
@@ -267,7 +267,7 @@ pm.test("response salary[2] > response salary[1] and > response salary[0]", func
 
 <hr>
 
-## 5. `http://162.55.220.72:5005/test_pet_info`
+### 4. `http://162.55.220.72:5005/test_pet_info`
 + Request
 ```
 POST
@@ -280,10 +280,10 @@ auth_token
 + Response
 ```json
 {
-    "name": "name",
-    "age": "age",
-    "daily_food":"weight" * 0.012,
-    "daily_sleep": "weight" * 2.5
+    "name":"name",
+    "age":"age",
+    "daily_food":"weight * 0.012",
+    "daily_sleep":"weight * 2.5"
 }
 ```
 
@@ -340,7 +340,7 @@ pm.test("request weight*2.5 = response daily_food", function () {
 });
 ```
 
-## 5. `http://162.55.220.72:5005/get_test_user`
+### 5. `http://162.55.220.72:5005/get_test_user`
 + Request
 ```
 POST
@@ -358,10 +358,11 @@ auth_token
     "salary":"salary",
     "family":{
                 "children":[
-                    ["Alex", 24],
-                    ["Kate", 12]
+                    ["Alex", "24"],
+                    ["Kate", "12"]
                     ],
-    "u_salary_1.5_year": "salary" * 4}
+    "u_salary_1.5_year": "salary * 4"
+    }
 }
 ```
 
@@ -454,7 +455,7 @@ pm.test("Значение поля age в ответе соответсвует 
 
 <hr>
 
-## 6. `http://162.55.220.72:5005/currency`
+### 6. `http://162.55.220.72:5005/currency`
 + Request
 ```
 POST
@@ -494,7 +495,7 @@ pm.environment.set("randomCur_ID", randomCur_ID.Cur_ID);
 
 <hr>
 
-## 7. `http://162.55.220.72:5005/curr_byn`
+### 7. `http://162.55.220.72:5005/curr_byn`
 + Request
 ```
 POST
@@ -559,7 +560,7 @@ pm.test("Validate JSON schema", function() {
 
 <hr>
 
-## 7. `http://162.55.220.72:5005/currency`***
+### 7. `http://162.55.220.72:5005/currency`***
 
 1. получить список валют
 2. итерировать список валют
